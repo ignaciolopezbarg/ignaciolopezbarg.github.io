@@ -1,0 +1,25 @@
+footer {
+    width: 70%;
+    background-color: $color-back;
+    border: 1px solid $color-bor;
+    border-radius: $border-r;
+    margin: 0 auto;
+
+    & :hover {
+        background-color: rgb(243, 247, 249);
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0 auto;
+        padding-top: 4px;
+        padding-bottom: 4px;
+
+        .icons {
+            width: 38px;
+            height: 38px;
+        }
+    }
+}

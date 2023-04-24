@@ -1,0 +1,24 @@
+nav {
+    border: 1px solid $color-bor;
+    border-radius: 50px;
+    width: 75%;
+    margin: 0 auto;
+    background-color: $color-back;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+
+        li {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            margin: 0 auto;
+            justify-content: center;
+
+        }
+    }
+}

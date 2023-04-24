@@ -1,0 +1,347 @@
+@charset "UTF-8";
+*  {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  border: 1px solid blue;
+  border-radius: 50px;
+  width: 75%;
+  margin: 0 auto;
+  background-color: azure;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+nav ul li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+footer {
+  width: 70%;
+  background-color: azure;
+  border: 1px solid blue;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+footer :hover {
+  background-color: rgb(243, 247, 249);
+}
+footer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+footer div .icons {
+  width: 38px;
+  height: 38px;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+h1 {
+  background-color: aliceblue;
+  margin: 0 auto;
+}
+
+h2 {
+  width: 95%;
+  border: blue;
+  border-radius: 8px;
+  background-color: azure;
+}
+
+.bienvenida {
+  display: grid;
+  width: 100%;
+  padding-bottom: 10px;
+  grid-template-areas: "comentarios1 ar cost1" " comentarios2 ab cost2";
+  grid-template-columns: 50% 25% 25%;
+  grid-template-rows: 50% 50%;
+  margin-left: auto;
+}
+
+.cost2 {
+  grid-area: cost2;
+  width: 120px;
+  height: 120px;
+}
+
+.cost1 {
+  grid-area: cost1;
+  width: 120px;
+  height: 120px;
+}
+
+.ab {
+  grid-area: ab;
+  width: 120px;
+  height: 120px;
+}
+
+.ar {
+  grid-area: ar;
+  width: 120px;
+  height: 120px;
+}
+
+.comentarios2 {
+  grid-area: comentarios2;
+  border: 1px solid blue;
+  border-radius: 8px;
+  margin-left: 3px;
+}
+
+.comentarios1 {
+  grid-area: comentarios1;
+  border: 1px solid blue;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 400px) {
+  .bienvenida {
+    display: grid;
+    grid-template-areas: "ar      ab" "comentarios1 comentarios1 " "comentarios2 comentarios2" " cost1 cost2";
+    grid-template-columns: 48% 48%;
+    grid-template-rows: 22% 28% 28% 22%;
+  }
+  .bienvenida .ar {
+    height: auto;
+  }
+  .bienvenida .ar .ab {
+    height: auto;
+  }
+  .bienvenida .ar .ab .cost1 {
+    height: 100px;
+  }
+  .bienvenida .ar .ab .cost1 .cost2 {
+    height: auto;
+  }
+  .bienvenida .ar .ab .cost1 .cost2 .comentarios1 {
+    font-size: 13px;
+  }
+  .bienvenida .ar .ab .cost1 .cost2 .comentarios1 .comentarios2 {
+    font-size: 13px;
+  }
+}
+#fotos {
+  width: 95%;
+  border: 2px black solid;
+  display: grid;
+  padding-bottom: 5px;
+  margin: 0 auto;
+  grid-template-columns: 32% 32% 32%;
+  grid-template-rows: 48% 28% 24%;
+  grid-template-areas: "izq      cent        der" "bot      bot        bot" "parrafos parrafos parrafos";
+}
+
+.izq {
+  grid-area: izq;
+  margin-left: 2px;
+  margin-top: 2rem;
+  width: 95%;
+  height: 80%;
+}
+
+.cent {
+  grid-area: cent;
+  margin-left: 2px;
+  margin-top: 2rem;
+  width: 95%;
+  height: 80%;
+}
+
+.der {
+  grid-area: der;
+  margin-left: 2px;
+  margin-top: 2rem;
+  width: 95%;
+  height: 80%;
+}
+
+.bot {
+  background-color: rgb(227, 233, 238);
+  grid-area: bot;
+  text-align: center;
+  border: 1px solid blue;
+  margin-left: 2px;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.parrafos {
+  background-color: rgb(227, 233, 238);
+  grid-area: parrafos;
+  text-align: center;
+  border: 1px solid blue;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 650px) {
+  #fotos {
+    grid-template-columns: 95%;
+    grid-template-rows: 21% 21% 21% 20% 17%;
+    grid-template-areas: "izq " "cent" "der" "bot" "parrafos";
+  }
+}
+.bot {
+  font-size: 15px;
+}
+
+.parrafos {
+  font-size: 15px;
+}
+
+nav ul {
+  font-size: 11px;
+}
+
+.misc {
+  display: flex;
+  background-color: antiquewhite;
+  margin: 0 auto;
+}
+
+.nuevostitulos {
+  display: inline-block;
+  width: 100%;
+  background-color: antiquewhite;
+  padding: 5px;
+}
+
+.col-12 {
+  border: 1px solid brown;
+}
+
+.col-10 {
+  border: 1px solid brown;
+}
+
+.col-8 {
+  border: 1px solid brown;
+}
+
+.textarea {
+  border: 1px solid brown;
+}
+
+#clientes {
+  text-align: center;
+}
+
+#consorcios {
+  text-align: center;
+}
+
+#top {
+  text-align: center;
+}
+
+.foto {
+  background-color: lightblue;
+  width: 70%;
+}
+
+#consulta {
+  background-color: rgb(210, 229, 247);
+  width: 95%;
+  margin: 0 auto;
+}
+
+details {
+  background-color: azure;
+  padding: 0.3rem;
+  border-radius: 8px;
+  margin: 0.5rem;
+}
+details summary {
+  list-style-type: circle;
+}
+
+.muñequitos {
+  border: 2px solid blue;
+  border-radius: 8px;
+  display: flex;
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+  align-items: center;
+  margin: 0 auto;
+  background-color: rgba(219, 228, 234, 0.5);
+}
+.muñequitos :hover {
+  background-color: azure;
+}
+
+.mune {
+  width: 95%;
+  height: auto;
+}
+
+.ns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carro {
+  display: grid;
+  grid-template-areas: "carouselExampleInterval nuevosserv";
+  grid-template-rows: auto;
+  grid-template-columns: 55% 45%;
+}
+.carro .nuevosserv {
+  background-color: antiquewhite;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 5%;
+}
+.carro .nuevosserv #carouselExampleInterval {
+  background-color: burlywood;
+  width: 300px;
+  height: auto;
+}
+
+@media screen and (max-width: 550px) {
+  .carro {
+    grid-template-areas: "carouselExampleInterval" "nuevosserv";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    padding: 10px;
+  }
+  .carro .nuevosserv {
+    margin: 0 10px;
+    width: 70%;
+  }
+  .carro .nuevosserv .carouselExampleInterval {
+    margin: 0 auto;
+  }
+}
+.area {
+  display: flex;
+  justify-content: center;
+}
+
+#fondo {
+  background-color: rgb(235, 232, 232);
+}
+
+/*# sourceMappingURL=style.css.map */

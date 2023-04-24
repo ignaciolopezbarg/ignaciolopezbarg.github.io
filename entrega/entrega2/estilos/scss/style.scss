@@ -1,0 +1,333 @@
+* {
+    @import "base/reset.scss";
+}
+
+$color-bor: blue;
+$color-back: azure;
+$border-r: 8px;
+$med-w: 120px;
+$med-h: 120px;
+$border2 : 1px solid brown;
+@import "componentes/nav.scss";
+@import "componentes/footer.scss";
+
+body {
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+h1 {
+    background-color: aliceblue;
+    margin: 0 auto;
+}
+
+h2 {
+    width: 95%;
+    border: $color-bor;
+    border-radius: $border-r;
+    background-color: $color-back;
+}
+
+.bienvenida {
+    display: grid;
+    width: 100%;
+    padding-bottom: 10px;
+    grid-template-areas: "comentarios1 ar cost1"
+        " comentarios2 ab cost2";
+    grid-template-columns: 50% 25% 25%;
+    grid-template-rows: 50% 50%;
+    margin-left: auto;
+}
+
+.cost2 {
+    grid-area: cost2;
+    width: $med-w;
+    height: $med-h;
+}
+
+.cost1 {
+    grid-area: cost1;
+    width: $med-w;
+    height: $med-h;
+}
+
+.ab {
+    grid-area: ab;
+    width: $med-w;
+    height: $med-h;
+}
+
+.ar {
+    grid-area: ar;
+    width: $med-w;
+    height: $med-h;
+}
+
+.comentarios2 {
+    grid-area: comentarios2;
+    border: 1px solid $color-bor;
+    border-radius: $border-r; 
+    margin-left: 3px;  
+}
+
+.comentarios1 {
+    grid-area: comentarios1;
+    border: 1px solid $color-bor;
+    border-radius: $border-r;
+}
+
+@media screen and (max-width:400px) {
+    .bienvenida {
+        display: grid;
+        grid-template-areas: "ar      ab"
+            "comentarios1 comentarios1 "
+            "comentarios2 comentarios2"
+            " cost1 cost2";
+        grid-template-columns: 48% 48%;
+        grid-template-rows: 22% 28% 28% 22%;
+
+        .ar {
+            height: auto;
+
+            .ab {
+                height: auto;
+
+                .cost1 {
+                    height: 100px;
+
+                    .cost2 {
+                        height: auto;
+
+                        .comentarios1 {
+                            font-size: 13px;
+
+                            .comentarios2 {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#fotos {
+    width: 95%;
+    border: 2px black solid;
+    display: grid;
+    padding-bottom: 5px;
+    margin: 0 auto;
+    grid-template-columns: 32% 32% 32%;
+    grid-template-rows: 48% 28% 24%;
+    grid-template-areas: "izq      cent        der"
+        "bot      bot        bot"
+        "parrafos parrafos parrafos";
+}
+
+.izq {
+    grid-area: izq;
+    margin-left: 2px;
+    margin-top: 2rem;
+    width: 95%;
+    height: 80%;
+}
+
+.cent {
+    grid-area: cent;
+    margin-left: 2px;
+    margin-top: 2rem;
+    width: 95%;
+    height: 80%;
+}
+
+.der {
+    grid-area: der;
+    margin-left: 2px;
+    margin-top: 2rem;
+    width: 95%;
+    height: 80%;
+}
+
+.bot {
+    background-color: rgb(227, 233, 238);
+    grid-area: bot;
+    text-align: center;
+    border: 1px solid $color-bor;
+    margin-left: 2px;
+    border-radius: $border-r;
+    margin-top: 2rem;
+}
+
+.parrafos {
+    background-color: rgb(227, 233, 238);
+    grid-area: parrafos;
+    text-align: center;
+    border: 1px solid $color-bor;
+    border-radius: $border-r;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width:650px) {
+    #fotos {
+        grid-template-columns: 95%;
+        grid-template-rows: 21% 21% 21% 20% 17%;
+        grid-template-areas: "izq "
+            "cent"
+            "der"
+            "bot"
+            "parrafos";
+    }
+}
+
+.bot {
+
+    font-size: 15px;
+}
+
+.parrafos {
+    font-size: 15px;
+}
+
+nav ul {
+    font-size: 11px;
+}
+
+.misc {
+    display: flex;
+    background-color: antiquewhite;
+    margin: 0 auto;
+}
+
+.nuevostitulos {
+    display: inline-block;
+    width: 100%;
+    background-color: antiquewhite;
+    padding: 5px;
+}
+
+.col-12 {
+    border: $border2;
+}
+
+.col-10 {
+    border: $border2;
+}
+
+.col-8 {
+    border: $border2;
+}
+
+.textarea {
+    border: $border2;
+}
+
+#clientes {
+    text-align: center;
+}
+
+#consorcios {
+    text-align: center;
+}
+
+#top {
+    text-align: center;
+}
+
+.foto {
+    background-color: lightblue;
+    width: 70%;
+}
+
+#consulta {
+    background-color: rgb(210, 229, 247);
+    width: 95%;
+    margin: 0 auto;
+}
+
+details {
+    background-color: azure;
+    padding: 0.3rem;
+    border-radius: $border-r;
+    margin: 0.5rem;
+
+    summary {
+        list-style-type: circle;
+    }
+}
+
+.muñequitos {
+    border: 2px solid $color-bor;
+    border-radius: $border-r;
+    display: flex;
+    width: 75%;
+    height: auto;
+    margin: 0 auto;
+    align-items: center;
+    margin: 0 auto;
+    background-color: rgba(219, 228, 234, 50%);
+
+    & :hover {
+        background-color: azure;
+    }
+}
+
+.mune {
+    width: 95%;
+    height: auto;
+}
+
+.ns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carro {
+    display: grid;
+    grid-template-areas: "carouselExampleInterval nuevosserv";
+    grid-template-rows: auto;
+    grid-template-columns: 55% 45%;
+
+    .nuevosserv {
+        background-color: antiquewhite;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-left: 5%;
+
+        #carouselExampleInterval {
+            background-color: burlywood;
+            width: 300px;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width:550px) {
+    .carro {
+        grid-template-areas: "carouselExampleInterval"
+            "nuevosserv";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        padding: 10px;
+
+        .nuevosserv {
+            margin: 0 10px;
+            width: 70%;
+
+            .carouselExampleInterval {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.area {
+    display: flex;
+    justify-content: center;
+}
+
+#fondo{
+    background-color: rgb(235, 232, 232);
+}
